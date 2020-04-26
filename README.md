@@ -8,7 +8,7 @@ First, install the code via the command line:
 ```
 npm install @myfarmapp/myfarmdesktop@1.0.0
 ```
-Then, install Electron and any other dependencies
+Then, install Electron and any other dependencies:
 ```
 npm install
 ```
