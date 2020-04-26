@@ -1,0 +1,16 @@
+{
+  "name": "myfarmdesktop",
+  "productName": "MyFarm",
+  "description": "MyFarm for the Desktop!",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "MyFarm",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "9.0.0-beta.13"
+  }
+}
