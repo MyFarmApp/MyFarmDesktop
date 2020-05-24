@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Oswald&display=swap');
+
+.gamepad {
+  display: none;
+}
+
+body {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
+  background-color: #009b3a;
+}
+
+h1 {
+  color: #00a1de;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 130px;
+}
+
+h2 {
+  color: #c60c30;
+}
+
+h3 {
+  color: #009b3a;
+}
+
+div {
+  border-radius: 25px;
+  background-color: #009b3a;
+  width: 40%;
+  padding: 10px;
+  margin: auto;
+}
+
+button, input {
+  font-family: 'Major Mono Display', monospace;
+  background-color: #c60c30;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  font-size: large;
+  padding: 5px;
+}
+
+input {
+  background-color: #00a1de;
+}

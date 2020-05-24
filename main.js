@@ -1,6 +1,7 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, dialog, Menu} = require('electron')
+var mainWindow;
 function createWindow () {
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -8,6 +9,7 @@ function createWindow () {
     }
   })
   mainWindow.loadFile('index.html')
+  mainWindow.openDevTools();
 }
 app.on('ready', createWindow)
 app.on('window-all-closed', function () {
@@ -20,3 +22,23 @@ app.on('activate', function () {
     createWindow()
   }
 })
+const template = [
+  {
+    label: "MyFarm Desktop"
+  },
+  {
+    label: "Open MyFarm",
+    click(){
+      const {shell} = require("electron");
+      shell.openExternal("https://myfarmapp-crops.web.app");
+    }
+  },
+  {
+    label: "Quit App",
+    click(){
+      app.quit();
+    }
+  }
+];
+const menu = Menu.buildFromTemplate(template);
+Menu.setApplicationMenu(menu);

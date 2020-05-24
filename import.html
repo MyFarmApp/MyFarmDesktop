@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>MyFarm</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript">
+    const Store = require('electron-store');
+    var store = new Store();
+
+    function imp() {
+      var url = "https://firebasestorage.googleapis.com/v0/b/myfarmapp-crops.appspot.com/o/" + document.querySelector('#box').value + ".json?alt=media";
+      var req = new XMLHttpRequest();
+      req.addEventListener("load", function() {
+        var resp = JSON.parse(this.responseText);
+        store.set(resp)
+        console.log(store.get("examples"));
+      });
+      req.open("GET", url);
+      req.send();
+    }
+  </script>
+</head>
+
+<body>
+  <h1>MyFarm</h1>
+  <h2>Enter your MFDid from the MyFarm Web App:</h2>
+  <input type="text" id="box" value=""><br />
+  <button type="button" onclick="imp();">Import</button>
+
+</body>
+
+</html>
