@@ -9,13 +9,13 @@
     const Store = require('electron-store');
     var store = new Store();
 
-    function imp() {
+    async function imp() {
       var url = "https://firebasestorage.googleapis.com/v0/b/myfarmapp-crops.appspot.com/o/" + document.querySelector('#box').value + ".json?alt=media";
       var req = new XMLHttpRequest();
       req.addEventListener("load", function() {
         var resp = JSON.parse(this.responseText);
-        store.set(resp)
-        console.log(store.get("examples"));
+        var storeref = await store.set(resp);
+        window.location.href = "index.html";
       });
       req.open("GET", url);
       req.send();
