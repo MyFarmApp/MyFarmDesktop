@@ -1,21 +1,17 @@
 {
-  "name": "@myfarmapp/myfarmdesktop",
+  "name": "myfarmdesktop",
   "productName": "MyFarm",
   "description": "MyFarm for the Desktop!",
-  "keywords": [],
+  "keywords": ["farm","farmer","myfarm","crops","plants"],
   "main": "./main.js",
   "version": "1.0.0",
   "author": "MyFarm",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "start": "electron ."
   },
   "dependencies": {
     "electron-store": "^5.1.1",
     "fs": "0.0.1-security",
-    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "electron": "^9.0.0-beta.22"
