@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Oswald&display=swap');
 
+.crop {
+  border: 5px solid #c60c30;
+  border-radius: 45px;
+  border-collapse: collapse;
+  max-width: 100px;
+}
+
 .gamepad {
   display: none;
 }

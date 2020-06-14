@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>MyFarm</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <h2><span id="name">Someone</span>'s Farm</h2>
+  <div id="plants"></div>
+  <script type="text/javascript">
+    const Store = require('electron-store');
+    var store = new Store({
+      fileExtension: "myfarm",
+      name: "farm"
+    });
+    document.querySelector('#name').innerText = store.get("user.displayname").split(" ")[0];
+    var plants = store.get("crops");
+    plants.forEach((item, i) => {
+      document.querySelector('#plants').innerHTML += "<img class=\"crop\" src=\"" + item.img + "\" title=\"" + item.name + " - " + item.ttg + "\"/>";
+    });
+
+  </script>
+</body>
+
+</html>

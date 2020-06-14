@@ -7,7 +7,10 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script type="text/javascript">
     const Store = require('electron-store');
-    var store = new Store();
+    var store = new Store({
+      fileExtension: "myfarm",
+      name: "farm"
+    });
     if(!store.get("user")){
       window.location.href = "import.html";
     }

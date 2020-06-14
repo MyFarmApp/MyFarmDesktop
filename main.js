@@ -5,11 +5,11 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      enableRemoteModule: true
     }
   })
   mainWindow.loadFile('index.html')
-  mainWindow.openDevTools();
 }
 app.on('ready', createWindow)
 app.on('window-all-closed', function () {
