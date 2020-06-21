@@ -2,9 +2,15 @@
   "name": "@myfarmapp/myfarmdesktop",
   "productName": "MyFarm",
   "description": "MyFarm for the Desktop!",
-  "keywords": ["farm","farmer","myfarm","crops","plants"],
+  "keywords": [
+    "farm",
+    "farmer",
+    "myfarm",
+    "crops",
+    "plants"
+  ],
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "main": "./main.js",
   "version": "2.0.1",
